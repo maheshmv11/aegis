@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			}
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			body{
+				width:500px;
+				max-width: 500px;
+				overflow:hidden;
+			}
+			.navbar{
+				padding:20px;
+				height:100px;
+			}
+			.actualcontent{
+				margin-top:20px;
+			}
+			.maintitle{
+				padding:10px;
+				margin-left:20px;
+			}
+			.logarea{
+				overflow: auto;
+			}
+			#logareacontainer{
+				display:none;
+			}
+			#databasecontainer{
+				display:none;
+			}
+			.phishbuttoncls{
+				width:100%;
+			}
+		</style>
+		<meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	    <!-- font awesome -->
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"/>
+	    <!--Import Google Icon Font-->
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	    <!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"/>
+	</head>
+	<body>
+		<header>
+			<nav class="nav-wrapper blue navbar">
+				<a href="" class="brand-logo left maintitle">AEGIS</a>
+				<a href="https://aegis-ext.000webhostapp.com/" target="_blank" class="tooltipped btn yellow right" id="toWebsite" data-position="bottom" data-tooltip="Help">
+                	<i class="fas fa-info-circle"></i>
+              	</a>
+			</nav>
+		</header>
+		<section class="container section actualcontent">
+			<div class="row actualcontent">
+				<div class="col s4 l4">
+					<button id="changeColor" class="btn green">Check site</button>
+				</div>
+				<div class="col s4 l4">
+					<button id="logButton" class="btn yellow">Log Details</button>
+				</div>
+				<div class="col s4 l4">
+					<button id="repButton" class="btn red">Report page</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section actualcontent">
+			<div class="row actualcontent">
+				<div class="col s12 l12 center">
+					<button id="phishButton" class="btn purple phishbuttoncls">Phishing</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section" id="databasecontainer">
+			<table id="tableforreport" class="table striped"></table>
+		</section>
+		
+		<section class="container section" id="logareacontainer">
+		</section>
+
+		<footer class="page-footer transparent">
+			<div class="footer-copyright grey darken-4">
+				<div class="container center-align">
+					&copy;2019 aegis.org
+				</div>
+			</div>
+		</footer>
+
+
+		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+		<script src="popup.js"></script>
+		<script src="ping.js"></script>
+	</body>
+</html>
