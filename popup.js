@@ -59,7 +59,7 @@ changeColor.onclick = function (element) {
 				if(isNew){
 					chrome.tabs.executeScript(
 						tabs[0].id,
-						{code: 'alert("This site is SSL secured");'}
+						{code: 'alert("This site is secured");'}
 					);
 				}else{ 
 					chrome.tabs.executeScript(
